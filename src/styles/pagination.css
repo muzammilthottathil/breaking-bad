@@ -1,0 +1,43 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: scroll;
+  margin-bottom: 100px;
+}
+.pagination::-webkit-scrollbar {
+  display: none;
+}
+
+.pagination-btn {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  left: 30vw;
+  height: 50px;
+  min-width: 50px;
+  max-width: 50px;
+  margin: 0 20px;
+  background-color: #2a303a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "PT Sans", sans-serif;
+  font-size: 1rem;
+  color: #fff;
+  transition: all ease-in-out 0.3s;
+}
+
+.active-page {
+  background-color: #fff;
+  color: #2a303a;
+}
+
+/* Large Mobile */
+@media (min-width: 576px) {
+  .pagination-btn {
+    left: auto;
+  }
+}

@@ -1,0 +1,138 @@
+/* Search and Filter Bar */
+
+.search-filter-bar {
+  max-width: 750px;
+  width: 100%;
+
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  border-radius: 10px;
+  background-color: #2a303a;
+  box-shadow: 0px 1px 76px rgba(0, 0, 0, 0.1);
+  padding: 13px;
+  margin-right: 10px;
+}
+
+.search img {
+  width: 1.3rem;
+}
+
+.search input {
+  flex-grow: 1;
+  font-family: "Montserrat", sans-serif;
+  outline: none;
+  border: none;
+  margin: 0 10px;
+  font-size: 1rem;
+  background: transparent;
+  color: #e9e9e9;
+}
+
+.filter {
+  border-radius: 10px;
+  background-color: #2a303a;
+  box-shadow: 0px 1px 76px rgba(0, 0, 0, 0.1);
+  padding: 0 13px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+
+  position: relative;
+}
+
+.filter-output {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+
+.filter img {
+  width: 1.2rem;
+  cursor: pointer;
+}
+
+.filter p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  background-color: #2a303a;
+  color: #e9e9e9;
+  text-align: center;
+  display: none;
+  margin-right: 10px;
+  min-width: 150px;
+  padding: 13px 0;
+}
+
+.filter-options {
+  position: absolute;
+  z-index: 99;
+  top: calc(100% + 10px);
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  color: #e9e9e9;
+
+  min-width: 200px;
+  max-height: 0;
+  overflow-y: hidden;
+
+  background-color: #2a303a;
+  border-radius: 10px;
+  transition: all ease-in-out 0.3s;
+}
+
+.filter-options::-webkit-scrollbar {
+  width: 8px;
+  border-radius: 0 10px 10px 0;
+  background-color: #2a303a;
+}
+
+.filter-options::-webkit-scrollbar-thumb {
+  border-radius: 0 10px 10px 0;
+  background-color: #73777d;
+}
+
+.filter-options input {
+  appearance: none;
+}
+
+.filter-options label {
+  cursor: pointer;
+  padding: 8px;
+  margin: 1px;
+}
+
+.active-filter-options {
+  max-height: 240px;
+  overflow-y: scroll;
+}
+
+/* Large Mobile */
+@media (min-width: 576px) {
+  .search-filter-bar {
+    width: 80%;
+  }
+}
+
+/* Tablet width */
+@media (min-width: 768px) {
+  .search-filter-bar {
+    width: 70%;
+  }
+
+  .filter p {
+    display: block;
+  }
+}

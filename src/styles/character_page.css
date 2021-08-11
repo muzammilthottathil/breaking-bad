@@ -1,0 +1,109 @@
+/* Character name and appearance */
+
+.character-nav {
+  color: #fff;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.character-nav .back-nav {
+  display: flex;
+  align-items: center;
+}
+.character-nav .back-nav img {
+  transform: rotate(-90deg);
+  width: 1.8rem;
+  margin: 0 10px;
+}
+.character-nav .back-nav h1 {
+  color: #c2cae2;
+  font-family: "PT Sans", sans-serif;
+  font-weight: bold;
+  font-size: 2.2rem;
+}
+.character-nav .appearance {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.character-nav .appearance > p {
+  margin-right: 15px;
+}
+.character-nav .appearance > div {
+  display: flex;
+}
+.character-nav .appearance > div > p {
+  height: 30px;
+  min-width: 30px;
+  max-width: 30px;
+  margin: 0 6px;
+  background-color: #2a303a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "PT Sans", sans-serif;
+  font-size: 0.8rem;
+  color: #fff;
+}
+
+/* Character details section */
+
+.character-detailed-section {
+  display: flex;
+  flex-direction: column;
+  margin: 3rem 0;
+  justify-content: space-evenly;
+}
+
+.character-in-detail {
+  width: 100%;
+  color: #ebebeb;
+  display: grid;
+  grid-template-columns: 3fr 1fr 4fr;
+  gap: 10px;
+  max-width: 600px;
+  padding: 2rem;
+  border-radius: 10px;
+  height: 360px;
+  margin: 3rem auto;
+
+  background: linear-gradient(
+    185.99deg,
+    rgba(42, 48, 58, 0.58) -10.11%,
+    rgba(42, 48, 58, 0) 46.5%
+  );
+  box-shadow: -5px 15px 80px rgba(0, 0, 0, 0.15);
+}
+
+.character-in-detail > p {
+  font-size: 0.9rem;
+}
+
+/* Tablet width */
+@media (min-width: 768px) {
+  .character-nav {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .character-nav .appearance {
+    margin-right: 30px;
+    margin-top: 0;
+  }
+}
+
+/*Small Laptop Screens */
+@media (min-width: 1024px) {
+  .character-detailed-section {
+    flex-direction: row;
+  }
+  .character-in-detail {
+    margin: auto;
+  }
+  .character-in-detail > p {
+    font-size: 1rem;
+  }
+}
